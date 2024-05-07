@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX 10
+struct node{
+	int data;
+	struct node *next;
+};
+typedof struct node NODE;	
+void insert_front(int);
+void delete_front();
+void display();
+NODE *head=NULL;
+int main(){
+	int choice,item;
+	while(1)
+	{
+		printf("\n MENU \n");
+		printf("1.insert front\n");
+		printf("2.delete front\n");
+		printf("3.display\n");
+		printf("Enter your choice\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+			case 1 :printf("Enter the element \n");
+				scanf("%d",&item);
+				insert_front(item);
+				break;
+			case 2 :delete_front();
+				break;
+			case 3 :display();
+				break;
+			case 4 :exit(0);
+			default:printf("invalid choice\n");
+		}
+	}
+}
+void inser_front(int item){
+	NODE *temp
+	trmp=(NODE*)malloc(sizeo(NODE));
+	tenp->data=head;
+	temp->next=head;
+	head=temp;
+}
+void delete_front()
+{	
+	NODE *temp;
+	if(head==NULL) printf("LIst is empty\n");
+	else{
+		temp=head;
+		head=head->next;
+		printf("Element deleted:%d\n",temp->data);
+		free(temp);
+	}
+}
+void dispaly()
+{
+	NODE *temp=head;
+	if(head==NULL) printf("List is empty\n");
+	else{
+		printf("list is content:\n");
+		while(temp!=NULL){
+			printf("%d",temp->data):
+			temp=temp->data;		
+		}
+	}
+}		
